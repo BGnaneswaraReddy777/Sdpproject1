@@ -1,0 +1,78 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+{% block body %}
+
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+<form class="form-horizontal" action="{% url 'Feedbackform' %}" method="POST">
+    {% csrf_token %}
+  <fieldset>
+          {% csrf_token %}
+<h1>Feedbackform</h1>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="Firstname">Firstname</label>
+      <div class="controls">
+        <input type="text" id="Firstname" name="Firstname" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+<br>
+       <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="Lastname">Lastname</label>
+      <div class="controls">
+        <input type="text" id="Lastname" name="Lastname" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+<br>
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="Email">E-mail</label>
+      <div class="controls">
+        <input type="text" id="Email" name="Email" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+<br>
+      <br>
+       <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="Comments">Comments</label>
+      <div class="controls">
+        <input type="text" id="Comments" name="Comments" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+<br>
+
+
+
+
+
+<br>
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success" type="submit">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+  </div>
+</div>
+</div>
+<br><br>
+<div>
+
+</div>
+{% endblock %}
+
+</html>
